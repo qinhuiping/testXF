@@ -17,9 +17,6 @@ import static android.support.v4.content.PermissionChecker.PERMISSION_GRANTED;
 
 public class MainActivity  extends IatBasicActivity implements View.OnClickListener {
 
-    /*
-  fdfdf
-     */
     private EditText mContent;
     private Button mBtnVoice;
 
