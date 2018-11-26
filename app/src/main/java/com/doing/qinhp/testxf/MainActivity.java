@@ -1,7 +1,9 @@
 package com.doing.qinhp.testxf;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -20,6 +22,8 @@ public class MainActivity  extends IatBasicActivity implements View.OnClickListe
     //dfdddfg
     private EditText mContent;
     private Button mBtnVoice;
+    private Button btIntent;
+    private Button bt_appStore;
 
 
     @Override
@@ -37,7 +41,23 @@ public class MainActivity  extends IatBasicActivity implements View.OnClickListe
     private void initView(){
         mContent = findViewById(R.id.et_content);
         mBtnVoice =findViewById(R.id.btn_voice);
+        btIntent = findViewById(R.id.bt_intent);
+        bt_appStore = findViewById(R.id.bt_appStore);
         mBtnVoice.setOnClickListener(this);
+        btIntent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String uri = "webcallapp://yceshop.com:8083/apb0303001Activity?itemId=528";
+                startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse(uri)));
+            }
+        });
+        bt_appStore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String uri2 = "market://details?id=com.yceshop";
+                startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse(uri2)));
+            }
+        });
         //调用父类方法
         initIatData(mContent);
     }
