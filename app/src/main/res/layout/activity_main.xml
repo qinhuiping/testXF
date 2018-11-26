@@ -2,36 +2,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     android:orientation="vertical">
 
-    <LinearLayout
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="识别的结果" />
+
+    <Button
+        android:id="@+id/btn_voice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical">
-
-        <EditText
-            android:id="@+id/et_content"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:hint="识别的结果" />
-
-        <Button
-            android:id="@+id/btn_voice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="点击录音" />
+        android:text="点击录音" />
 
 
-        <Button
-            android:id="@+id/bt_intent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/bt_intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/bt_appStore"
-            android:text="@string/app_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/bt_appStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name" />
+
 </LinearLayout>
