@@ -61,6 +61,33 @@ public class MainActivity extends IatBasicActivity implements View.OnClickListen
         btIntent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //scheme协议
+//                另一个APP 的manifest清单文件写法
+//                <activity
+//                android:
+//                name = ".ui.activity.ZMCertTestActivity"
+//                android:
+//                label = "@string/app_name"
+//                android:
+//                launchMode = "singleTask"
+//                android:
+//                screenOrientation = "portrait" >
+
+                //重点
+//                <intent - filter >
+//                    <action android:name = "android.intent.action.VIEW" / >
+//                    <category android:name = "android.intent.category.DEFAULT" / >
+//                    <category android:name = "android.intent.category.BROWSABLE" / >
+//                    <data
+
+//                                和下面的URI对应
+//                            android:scheme = "webcallapp"
+//                            android: host = "yceshop.com"
+//                            android: path = "/apb0303001Activity"
+//                            android:port = "8083" / >
+//                </intent - filter >
+//                </activity >
+
                 String uri = "webcallapp://yceshop.com:8083/apb0303001Activity?itemId=528";
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(uri)));
             }
@@ -68,6 +95,7 @@ public class MainActivity extends IatBasicActivity implements View.OnClickListen
         bt_appStore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //打开Android应用市场
                 String uri2 = "market://details?id=com.yceshop";
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(uri2)));
             }
