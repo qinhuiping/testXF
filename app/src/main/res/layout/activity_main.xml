@@ -30,4 +30,10 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name" />
 
+    <Spinner
+        android:id="@+id/sp_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
 </LinearLayout>
